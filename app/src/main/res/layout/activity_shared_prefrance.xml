@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SharedPrefrance">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="electric car"
+        android:layout_marginStart="60sp"
+        android:textSize="50sp"/>
+    <EditText
+        android:id="@+id/year"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="number of years"
+        android:textSize="24sp"/>
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="car amount"
+        android:textSize="24sp"/>
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="insert rate"
+        android:textSize="24sp"/>
+    <Button
+        android:id="@+id/payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="car payment"/>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:src="@drawable/j1"/>
+
+</LinearLayout>
