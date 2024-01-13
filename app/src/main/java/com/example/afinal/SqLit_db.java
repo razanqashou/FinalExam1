@@ -3,6 +3,7 @@ package com.example.afinal;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -47,7 +48,9 @@ public class SqLit_db extends AppCompatActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Cursor cur =databaseHelper.ViewStudent();
+                startActivity(new Intent(SqLit_db.this,List.class));
+                /*
+                   Cursor cur =databaseHelper.ViewStudent();
                 StringBuffer buffer = new StringBuffer();
                 while (cur.moveToNext()) {
 
@@ -61,7 +64,7 @@ public class SqLit_db extends AppCompatActivity {
                 builder.setMessage(buffer.toString());
                 builder.show();
                 Toast.makeText(SqLit_db.this,"successful view",Toast.LENGTH_SHORT).show();
-
+                 */
 
             }
 

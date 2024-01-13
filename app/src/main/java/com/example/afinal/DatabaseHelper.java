@@ -1,5 +1,7 @@
 package com.example.afinal;
 
+import static android.provider.Telephony.TextBasedSmsColumns.STATUS;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -49,7 +51,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
     }
+    public String getStatus(){ return STATUS; }
 }
+
